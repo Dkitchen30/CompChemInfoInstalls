@@ -1,0 +1,9 @@
+python >= 3.10
+conda create --yes python=3.10 -n py310chem
+starter= numpy pandas tqdm seaborn matplotlib jupyterlab scikit-learn yellowbrick debtcollector conda-forge::pymol-open-source
+cheminformatics= rdkit mols2grid openbabel
+abinitiomo=psi4 resp
+openmm= openmm  openmmforcefields
+source activate py310chem 
+abinitio=
+pip install git+https://github.com/Mishima-syk/psikit # edit after installation
