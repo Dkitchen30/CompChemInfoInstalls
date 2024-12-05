@@ -26,6 +26,8 @@ do
   fv=3.$v
   label=py3$v
   ename=${rootname}${label}
+  echo "conda create --yes python=$fv -n $ename >& create_${ename}.LOG"
+  quit
   conda create --yes python=$fv -n $ename >& create_${ename}.LOG
   mamba install --yes -n $ename $starter >& starter_${ename}.LOG
   mamba install --yes -n $ename $cheminformatics >& cheminformatics_${ename}.LOG
