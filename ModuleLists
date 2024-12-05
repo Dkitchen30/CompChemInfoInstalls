@@ -3,7 +3,7 @@ conda create --yes python=3.10 -n py310chem
 starter= numpy pandas tqdm seaborn matplotlib jupyterlab scikit-learn yellowbrick debtcollector conda-forge::pymol-open-source spyder
 cheminformatics= rdkit mols2grid openbabel biopython
 abinitiomo=psi4 resp
-openmm= openmm  openmmforcefields
+openmm= openmm  openmmforcefields ambertools mdtraj
 source activate py310chem 
 abinitio=
 pip install git+https://github.com/Mishima-syk/psikit # edit after installation
