@@ -25,6 +25,7 @@ abinitiomo="psi4 resp"
 openmm="openmm openmmforcefields ambertools mdtraj"
 #abinitio=
 # pip install git+https://github.com/Mishima-syk/psikit # edit after installation
+# download psikit.py
 for v in ${vers//,/ }
 do
   fv=3.$v
