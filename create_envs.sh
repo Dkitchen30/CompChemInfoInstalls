@@ -7,7 +7,7 @@ export PATH=${condaloc}/bin:${condaloc}/condabin:$PATH
 python --version
 which conda
 conda-env list
-vers=10,11,12
+vers=9,10,11,12
 subver=9
 source activate base
 if [ E`which mamba` == E ]; then
@@ -23,6 +23,7 @@ starter="numpy pandas tqdm seaborn matplotlib jupyterlab scikit-learn yellowbric
 cheminformatics="rdkit mols2grid openbabel biopython"
 abinitiomo="psi4 resp"
 openmm="openmm openmmforcefields ambertools mdtraj"
+sublist="deepchem"
 #abinitio=
 # pip install git+https://github.com/Mishima-syk/psikit # edit after installation
 # download psikit.py
@@ -39,7 +40,14 @@ do
   mamba install --yes -n $ename $abinitiomo >& abinitiomo_${ename}.LOG
   mamba install --yes -n $ename $openmm >& openmm_${ename}.LOG
   source activate $ename
-  pip install git+https://github.com/Mishima-syk/psikit
+  pip install git+https://github.com/Mishima-syk/psikit >& psikit_${ename}.LOG
+  if [ -e psikit.py ]; then
+    # cp to $ename install location
+    # find ${condaloc}/envs/${ename} -name psikit.py -print
+    cp ${condaloc}/envs/${ename}/lib/python${fv}/site-packages/psikit/psikit.py ${condaloc}/envs/${ename}/lib/python${fv}/site-packages/psikit/psikit.py_orig
+    cp psikit.py ${condaloc}/envs/${ename}/lib/python${fv}/site-packages/psikit/
+  fi
+  conda deactivate
 done
   
   
