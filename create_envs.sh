@@ -15,10 +15,10 @@ mamba install --yes anaconda::jupyter anaconda::spyder
 # lists of modules to be installed
 #  if gpu's involved then cudalib=11.8
 cuda="" 
-starter=numpy pandas tqdm seaborn matplotlib jupyterlab scikit-learn yellowbrick debtcollector conda-forge::pymol-open-source spyder
-cheminformatics=rdkit mols2grid openbabel biopython
-abinitiomo=psi4 resp
-openmm=openmm openmmforcefields ambertools mdtraj
+starter="numpy pandas tqdm seaborn matplotlib jupyterlab scikit-learn yellowbrick debtcollector conda-forge::pymol-open-source spyder"
+cheminformatics="rdkit mols2grid openbabel biopython"
+abinitiomo="psi4 resp"
+openmm="openmm openmmforcefields ambertools mdtraj"
 #abinitio=
 # pip install git+https://github.com/Mishima-syk/psikit # edit after installation
 for v in vers
