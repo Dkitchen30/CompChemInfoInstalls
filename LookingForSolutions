@@ -1,0 +1,11 @@
+modules and software that would be helpful
+
+pdf extraction 
+from https://towardsdatascience.com/how-to-extract-text-from-pdf-245482a96de7
+
+Specifically, users across the internet seem to be using: 
+PyPDF2, Textract, tika, pdfPlumber, pdfMiner.
+During my research, however, for one reason or another, 
+I was only able to get 3 of these libraries to work as expected. 
+For some of these libraries, 
+the set up was too complicated (missing dependencies, strange error messages
