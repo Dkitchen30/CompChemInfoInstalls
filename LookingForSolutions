@@ -10,6 +10,7 @@ I was only able to get 3 of these libraries to work as expected.
 For some of these libraries, 
 the set up was too complicated (missing dependencies, strange error messages
 
+humanize
 
 guis
 https://python.plainenglish.io/nicegui-how-to-create-stunning-web-interfaces-in-python-with-minimal-code-7d33fdac998e
