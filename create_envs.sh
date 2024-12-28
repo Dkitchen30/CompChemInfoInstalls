@@ -19,7 +19,7 @@ fi
 # lists of modules to be installed
 #  if gpu's involved then cudalib=11.8
 cuda="" 
-starter="numpy pandas tqdm seaborn matplotlib jupyterlab scikit-learn yellowbrick debtcollector conda-forge::pymol-open-source spyder"
+starter="nodejs numpy pandas tqdm seaborn matplotlib jupyterlab scikit-learn yellowbrick debtcollector conda-forge::pymol-open-source spyder"
 cheminformatics="rdkit mols2grid openbabel biopython"
 abinitiomo="psi4 resp"
 openmm="openmm openmmforcefields ambertools mdtraj"
@@ -41,6 +41,7 @@ do
   mamba install --yes -n $ename $openmm >& openmm_${ename}.LOG
   source activate $ename
   pip install git+https://github.com/Mishima-syk/psikit >& psikit_${ename}.LOG
+  pip install npm
   if [ -e psikit.py ]; then
     # cp to $ename install location
     # find ${condaloc}/envs/${ename} -name psikit.py -print
