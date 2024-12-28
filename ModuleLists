@@ -7,3 +7,4 @@ openmm= openmm  openmmforcefields ambertools mdtraj
 source activate py310chem 
 abinitio=
 pip install git+https://github.com/Mishima-syk/psikit # edit after installation
+pip install nqm
